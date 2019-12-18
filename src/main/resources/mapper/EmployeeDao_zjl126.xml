@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lkytest.dao.EmployeeDao_zjl126">
+    <select id="getEmployee" resultType="com.lkytest.entity.Employee_zjl126">
+        select * from employee where name=#{name} and password=#{password}
+    </select>
+    <insert id="saveEmployee" parameterType="com.lkytest.entity.Employee_zjl126">
+        insert into employee(name,password,department) values (#{name},#{password},#{department})
+    </insert>
+</mapper>
